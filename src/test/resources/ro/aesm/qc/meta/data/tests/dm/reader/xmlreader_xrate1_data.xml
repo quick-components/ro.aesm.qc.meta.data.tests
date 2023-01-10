@@ -1,0 +1,15 @@
+<xrates>
+	<header date="2022-10-07">
+		<description>Exchange rates</description>
+	</header>
+	<data>
+		<currency code="RON">
+			<name>Romania leu</name>
+		</currency>
+		<rates>
+			<rate currency="EUR">4.9</rate>
+			<rate currency="USD">5.01</rate>
+			<rate currency="HUF" multiplier="100">1.17</rate>
+		</rates>
+	</data>
+</xrates>

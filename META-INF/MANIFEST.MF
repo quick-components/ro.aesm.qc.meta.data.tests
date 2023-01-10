@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: QC data meta model tests
+Bundle-SymbolicName: ro.aesm.qc.meta.data.tests
+Bundle-Version: 0.0.1.qualifier
+Fragment-Host: ro.aesm.qc.meta.data
+Import-Package: org.junit.jupiter.api;version="5.0.0",
+ ro.aesm.qc.api.base
+Automatic-Module-Name: ro.aesm.qc.meta.data.tests
+Bundle-RequiredExecutionEnvironment: JavaSE-11

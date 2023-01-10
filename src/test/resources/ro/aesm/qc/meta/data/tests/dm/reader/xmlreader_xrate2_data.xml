@@ -1,0 +1,19 @@
+<xrates>
+	<header date="2022-10-07">
+		<description>Exchange rates</description>
+	</header>
+	<currency code="RON">
+		<name>Romania leu</name>
+		<rate_values>
+			<rate_value currency="EUR">4.9</rate_value>
+			<rate_value currency="USD">5.01</rate_value>
+		</rate_values>
+	</currency>
+	<currency code="EUR">
+		<name>Euro</name>
+		<rate_values>
+			<rate_value currency="USD">1.05</rate_value>
+			<rate_value currency="RON">0.204</rate_value>
+		</rate_values>
+	</currency>
+</xrates>

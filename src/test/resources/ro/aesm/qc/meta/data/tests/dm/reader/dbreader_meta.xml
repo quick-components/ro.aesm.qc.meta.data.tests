@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<m:model xmlns:m="https://qc.aesm.ro/meta"
+	xmlns="https://qc.aesm.ro/meta/data_map">
+	<m:data_map name="xrates">
+		<list name="rates">
+			<source type="table" name="xrate" alias="r">
+				<where>r.currency like :p_currency_code </where>
+				<order_by>r.date desc, currency  </order_by>
+			</source>
+			<items>
+				<item name="id" />
+				<item name="date" />
+				<item name="rate" />
+				<item name="currency_id" />
+				<item name="ref_currency_id" />
+				<item name="currency">
+					<source>select name from currencies where id = r.currency_id</source>
+				</item>
+				<item name="ref_currency" />
+			</items>
+		</list>
+	</m:data_map>
+</m:model>

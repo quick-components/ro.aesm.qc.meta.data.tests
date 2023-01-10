@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<m:model xmlns:m="https://qc.aesm.ro/meta"
+	xmlns="https://qc.aesm.ro/meta/data_map">
+	<m:data_map name="currencies">
+		<list name="currencies">
+			<items>
+				<item name="name" path="currency_name" />
+				<item name="iso3" path="1" />
+				<item name="isonum" path="2" />
+				<item name="decimals" />
+				<item name="created_at" value="var:current_datetime" />
+				<item name="created_by" value="var:exec_user" />
+				<item name="modified_at" value="var:current_datetime" />
+				<item name="modified_by" value="var:exec_user" />
+			</items>
+		</list>
+	</m:data_map>
+</m:model>

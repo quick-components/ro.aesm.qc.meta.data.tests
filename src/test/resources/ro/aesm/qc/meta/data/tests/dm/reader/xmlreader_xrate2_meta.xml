@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<m:model xmlns:m="https://qc.aesm.ro/meta"
+	xmlns="https://qc.aesm.ro/meta/data_map">
+	<m:data_map name="xrates" path="xrates">
+		<customizer for="xml_reader"
+			class="ro.aesm.qc.meta.data.tests.dm.Xrate2XmlReaderCustomizer" />
+		<list name="currencies" path="currency">
+			<items>
+				<item name="code" path="@code" />
+				<item name="name" />
+				<item name="rates" path="rate_values" type="ref" ref="rates" />
+			</items>
+		</list>
+		<list name="rates" type="detail" path="rate_value">
+			<items>
+				<item name="date" path="//xrates.header.@date" />
+				<item name="currency" path="@currency" />
+				<item name="rate" path="" />
+				<item name="ref_currency" value="parent_field:code" />
+			</items>
+		</list>
+	</m:data_map>
+</m:model>
