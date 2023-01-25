@@ -17,7 +17,7 @@ import ro.aesm.qc.base.ExecutionContext;
 import ro.aesm.qc.meta.data.dm.DmModel;
 import ro.aesm.qc.meta.data.dm.DmParser;
 import ro.aesm.qc.meta.data.dm.processor.reader.DsCsvReader;
-import ro.aesm.qc.meta.data.dm.processor.reader.DsXmlReader;
+import ro.aesm.qc.meta.data.dm.processor.reader.DmXmlReader;
 
 public class Test_DmFileReader {
 
@@ -39,7 +39,7 @@ public class Test_DmFileReader {
 		assertTrue((model != null), "Data-map " + metaLocation + ":xrates resolved");
 
 		try (InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(dataLocation)) {
-			DsXmlReader dmReader = new DsXmlReader();
+			DmXmlReader dmReader = new DmXmlReader();
 
 			Map<String, List<Map<String, Object>>> result = dmReader.read(model, inputStream,
 					this.createExecutionContext());
@@ -85,7 +85,7 @@ public class Test_DmFileReader {
 		assertTrue((model != null), "Data-map " + metaLocation + ":xrates resolved");
 
 		try (InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(dataLocation)) {
-			DsXmlReader xmlParser = new DsXmlReader();
+			DmXmlReader xmlParser = new DmXmlReader();
 			Map<String, List<Map<String, Object>>> result = xmlParser.read(model, inputStream,
 					this.createExecutionContext());
 

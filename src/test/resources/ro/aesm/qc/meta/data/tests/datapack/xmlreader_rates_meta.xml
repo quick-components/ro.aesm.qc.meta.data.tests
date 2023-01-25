@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<m:model xmlns:m="https://qc.aesm.ro/meta"
+	xmlns="https://qc.aesm.ro/meta/data">
+	<m:datapack name="xrates" path="xrates">
+		<customizer for="xml_reader"
+			class="ro.aesm.qc.meta.data.tests.datapack.XmlReaderRatesCustomizer" />
+		<dataset name="currencies" path="currency">
+			<items>
+				<item name="rownum" value="rownum" />
+				<item name="code" path="@code" />
+				<item name="name" />
+				<item name="created_at" value="current_datetime"/>
+				<item name="created_by" value="exec_user"/>
+				<item name="rates" path="rate_values" type="ref" ref="rates" />
+			</items>
+		</dataset>
+		<dataset name="rates" type="detail" path="rate_value">
+			<items>
+				<item name="dateFromAttr1" path="//xrates.header.@dateAttr1" />
+				<item name="dateFromAttr2" path="//xrates.header.@dateAttr2" />
+				<item name="dateFromField1" path="//xrates.header.dateField1" />
+				<item name="dateFromField2" path="//xrates.header.dateField2" />
+				<item name="currency" path="@currency" />
+				<item name="rate" path="" />
+				<item name="ref_currency_rownum" valueType="parent_item" value="rownum" />
+				<item name="ref_currency" valueType="parent_item" value="code" />
+			</items>
+		</dataset>
+	</m:datapack>
+</m:model>

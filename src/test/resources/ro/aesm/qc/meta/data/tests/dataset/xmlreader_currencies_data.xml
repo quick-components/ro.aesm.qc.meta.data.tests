@@ -1,0 +1,12 @@
+ 
+	<currencies>
+		<currency iso3="EUR" isonum="978">
+			<name>Euro</name>
+			<decimals>2</decimals>
+		</currency>
+		<currency iso3="RON" isonum="946">
+			<name>Romania leu</name>
+			<decimals>2</decimals>
+		</currency>
+	</currencies>
+ 

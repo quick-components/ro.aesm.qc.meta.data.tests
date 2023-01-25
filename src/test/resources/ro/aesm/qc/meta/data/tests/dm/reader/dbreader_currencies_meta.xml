@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<m:model xmlns:m="https://qc.aesm.ro/meta"
+	xmlns="https://qc.aesm.ro/meta/data_map">
+	<m:data_map name="currencies">
+		<list name="currencies" path="currencieslist.currency">
+			<source type="table" name="bd_currencies">
+				<where>iso3 = 'RON' </where>
+				<order_by>iso3 </order_by>
+			</source>
+			<items>
+				<item name="id" path="@id" />
+				<item name="iso3" path="@code" />
+				<item name="name"   />
+				<item name="isonum" />
+				<item name="created_at" path="audit.create.time" />
+				<item name="created_by" path="audit.create.user" />
+				<item name="modified_at" path="audit.modif.time" />
+				<item name="modified_by" path="audit.modif.user" />
+				<item name="created_at_attr" path="audit.create2.@time" >
+					<source >created_at</source>
+				</item>
+				<item name="created_by_attr" path="audit.create2.@user" >
+					<source >created_by</source>
+				</item>
+				 
+			</items>
+		</list>
+	</m:data_map>
+</m:model>

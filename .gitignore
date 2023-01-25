@@ -8,3 +8,6 @@ target/**
 bin/**
 /bin/
 /target/
+
+
+.polyglot.META-INF

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<m:model xmlns:m="https://qc.aesm.ro/meta"
+	xmlns="https://qc.aesm.ro/meta/data">
+	<m:dataset name="currencies" path="currencies.currency">
+		<items>
+			<item name="code" path="@iso3" />
+			<item name="isonum" path="@isonum" />
+			<item name="name" path="name" />
+		</items>
+	</m:dataset>
+</m:model>
